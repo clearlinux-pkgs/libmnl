@@ -4,7 +4,7 @@
 #
 Name     : libmnl
 Version  : 1.0.3
-Release  : 7
+Release  : 8
 URL      : http://ftp.netfilter.org/pub/libmnl/libmnl-1.0.3.tar.bz2
 Source0  : http://ftp.netfilter.org/pub/libmnl/libmnl-1.0.3.tar.bz2
 Summary  : Minimalistic Netlink communication library

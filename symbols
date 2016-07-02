@@ -1,5 +1,6 @@
 libmnl.so.0:LIBMNL_1.0
 libmnl.so.0:LIBMNL_1.1
+libmnl.so.0:LIBMNL_1.2
 libmnl.so.0:mnl_attr_get_len
 libmnl.so.0:mnl_attr_get_payload
 libmnl.so.0:mnl_attr_get_payload_len
@@ -59,10 +60,12 @@ libmnl.so.0:mnl_nlmsg_seq_ok
 libmnl.so.0:mnl_nlmsg_size
 libmnl.so.0:mnl_socket_bind
 libmnl.so.0:mnl_socket_close
+libmnl.so.0:mnl_socket_fdopen
 libmnl.so.0:mnl_socket_get_fd
 libmnl.so.0:mnl_socket_get_portid
 libmnl.so.0:mnl_socket_getsockopt
 libmnl.so.0:mnl_socket_open
+libmnl.so.0:mnl_socket_open2
 libmnl.so.0:mnl_socket_recvfrom
 libmnl.so.0:mnl_socket_sendto
 libmnl.so.0:mnl_socket_setsockopt

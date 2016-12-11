@@ -4,7 +4,7 @@
 #
 Name     : libmnl
 Version  : 1.0.4
-Release  : 9
+Release  : 10
 URL      : http://ftp.netfilter.org/pub/libmnl/libmnl-1.0.4.tar.bz2
 Source0  : http://ftp.netfilter.org/pub/libmnl/libmnl-1.0.4.tar.bz2
 Summary  : Minimalistic Netlink communication library
@@ -63,9 +63,10 @@ rm -rf %{buildroot}
 %files dev
 %defattr(-,root,root,-)
 /usr/include/libmnl/libmnl.h
-/usr/lib64/*.so
-/usr/lib64/pkgconfig/*.pc
+/usr/lib64/libmnl.so
+/usr/lib64/pkgconfig/libmnl.pc
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/*.so.*
+/usr/lib64/libmnl.so.0
+/usr/lib64/libmnl.so.0.2.0

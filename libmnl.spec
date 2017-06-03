@@ -6,7 +6,7 @@
 #
 Name     : libmnl
 Version  : 1.0.4
-Release  : 13
+Release  : 14
 URL      : https://www.netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2
 Source0  : https://www.netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2
 Source99 : https://www.netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2.sig
@@ -71,8 +71,18 @@ cp -a libmnl-1.0.4 build32
 popd
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1492120833
+export SOURCE_DATE_EPOCH=1496525414
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -Os -Wl,--gc-sections -fdata-sections -ffat-lto-objects -ffunction-sections -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -Os -Wl,--gc-sections -fdata-sections -ffat-lto-objects -ffunction-sections -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -Os -Wl,--gc-sections -fdata-sections -ffat-lto-objects -ffunction-sections -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -Os -Wl,--gc-sections -fdata-sections -ffat-lto-objects -ffunction-sections -flto -fno-semantic-interposition "
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -88,11 +98,11 @@ popd
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1492120833
+export SOURCE_DATE_EPOCH=1496525414
 rm -rf %{buildroot}
 pushd ../build32/
 %make_install32

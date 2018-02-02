@@ -6,7 +6,7 @@
 #
 Name     : libmnl
 Version  : 1.0.4
-Release  : 14
+Release  : 15
 URL      : https://www.netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2
 Source0  : https://www.netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2
 Source99 : https://www.netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2.sig
